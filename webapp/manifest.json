@@ -73,7 +73,7 @@
           "i18n": {
               "type": "sap.ui.model.resource.ResourceModel",
               "settings": {
-                  "bundleName": "sap.ui.demo.walkthrough.i18n.i18n",
+                  "bundleName": "sap.ui.demo.sapfiori.i18n.i18n",
                   "supportedLocales": [""],
                   "fallbackLocale": ""
               },
@@ -88,7 +88,7 @@
           }
       },
       "rootView": {
-          "viewName": "sap.ui.demo.walkthrough.view.App",
+          "viewName": "sap.ui.demo.sapfiori.view.App",
           "type": "XML",
           "async": true,
           "id": "app"
@@ -101,7 +101,7 @@
           "config": {
               "routerClass": "sap.m.routing.Router",
               "viewType": "XML",
-              "viewPath": "sap.ui.demo.walkthrough.view",
+              "viewPath": "sap.ui.demo.sapfiori.view",
               "controlId": "app",
               "controlAggregation": "pages",
               "async": true
