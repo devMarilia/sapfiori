@@ -4,8 +4,9 @@ sap.ui.define(
     "sap/m/MessageToast",
     "sap/ui/model/json/JSONModel",
     "sap/ui/model/resource/ResourceModel",
+    "sap/ui/core/Fragment" 
   ],
-  function (Controller, MessageToast, JSONModel, ResourceModel) {
+  function (Controller, MessageToast, JSONModel, ResourceModel, Fragment) {
     "use strict";
     return Controller.extend("sap.ui.demo.sapfiori.controller.App", {
       onInit: function () {
@@ -33,6 +34,18 @@ sap.ui.define(
         // show message
         MessageToast.show(sMsg);
       },
+      onOpenDialog : function () {
+
+        // create dialog lazily
+        if (!this.pDialog) {
+          this.pDialog = this.loadFragment({
+            name: "sap.ui.demo.sapfiori.view.HelloDialog"
+          });
+        } 
+        this.pDialog.then(function(oDialog) {
+          oDialog.open();
+        });
+      }
     });
   }
 );
